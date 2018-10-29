@@ -8,25 +8,32 @@ Get started by cloning the repo and following the instructions below.
 
 ### Prerequisites
 
-Were going to need to install pip, virtualenv, and the packages listed in the requirements.txt file. 
+Were going to need to install pip, virtualenv,chrome [selenium](http://chromedriver.chromium.org/downloads) driver and the packages listed in the requirements.txt file. 
 
 Currently only have Mac terminal commands. I think it works with Git shell as well for Windows users.
 Follow instructions below after opening a shell CLI.
 
 If there are any questions to help get started please post them!
 
-```
 
 ### Installing
 
+
 Install pip
+
 ```
 sudo easy_install pip
-
+```
 Install virtualenv
 
 ```
 pip install virtualenv
+```
+
+Next step is to activate virtualenv
+
+```
+source env/bin/activate
 ```
 
 Install packages from requirements.txt
@@ -41,7 +48,7 @@ under construction
 
 ## Authors
 
-* **Peter Moung** - *Initial work* 
+* **Peter Moung & friends** - *Initial work* 
 
 ## License
 
@@ -50,3 +57,8 @@ This project is licensed under the MIT License - see the [LICENSE](https://githu
 ## Acknowledgments
 
 * I always love to code for the community!
+
+## Problems faced
+
+* There were no fixed URL(makes convential scraping easy)
+* Typically it would be easy to scrape html but most result queries were in javascript objects
