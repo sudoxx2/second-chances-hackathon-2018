@@ -13,12 +13,15 @@ Were going to need to install pip, virtualenv, and the packages listed in the re
 Currently only have Mac terminal commands. I think it works with Git shell as well for Windows users.
 Follow instructions below after opening a shell CLI.
 
-Install pip
-```
-sudo easy_install pip
+If there are any questions to help get started please post them!
+
 ```
 
 ### Installing
+
+Install pip
+```
+sudo easy_install pip
 
 Install virtualenv
 
@@ -40,14 +43,10 @@ under construction
 
 * **Peter Moung** - *Initial work* 
 
-See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
-
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE](https://github.com/Luv2C0de/second-chances-hackathon-2018/blob/master/LICENSE) file for details
 
 ## Acknowledgments
 
-* Hat tip to anyone whose code was used
-* Inspiration
-* etc
+* I always love to code for the community!
