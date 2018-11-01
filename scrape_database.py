@@ -8,7 +8,9 @@ import time
 import requests
 import csv
 
-with open('base_case_100.csv') as csvfile:
+new_row_list = []
+
+with open('mjData.csv') as csvfile:
     reader = csv.reader(csvfile)
 
     # skip first two rows. need to refactor
@@ -16,6 +18,8 @@ with open('base_case_100.csv') as csvfile:
     next(reader)
 
     for row in reader:
+
+        num = 0
 
         site = "https://oneweb.yolo.courts.ca.gov/OneWebCaseInquiry/#/CaseNumberSearch"
 
@@ -93,7 +97,11 @@ with open('base_case_100.csv') as csvfile:
 
         # logic to perform csv action
         if result:
-            print(test + "confirmed name")
+            print(test + " - confirmed name")
+            num = 1
+            new_row = [row[0], row[1], row[2], row[3], row[4], row[5], row[6], row[7], row[8], row[9], row[10], row[11], row[12], row[13], row[14], row[15], num]
+            new_row_list.append(new_row)
+            print(new_row)
         else:
             driver.refresh()
 
@@ -127,11 +135,26 @@ with open('base_case_100.csv') as csvfile:
 
             if result:
                 print(test + " - confirmed name")
+                num = 1
+                new_row = [row[0], row[1], row[2], row[3], row[4], row[5], row[6], row[7], row[8], row[9], row[10], row[11], row[12], row[13], row[14], row[15], num]
+                new_row_list.append(new_row)
+                print(new_row)
             else:
                 print(test + " - not confirmed name")
-            
-
+                new_row = [row[0], row[1], row[2], row[3], row[4], row[5], row[6], row[7], row[8], row[9], row[10], row[11], row[12], row[13], row[14], row[15], num]
+                new_row_list.append(new_row)
+                print(new_row)
 
         time.sleep(3)
 
         driver.quit()
+
+with open('new_tester.csv', 'w') as csvfile:
+    writer = csv.writer(csvfile)
+
+    writer.writerow(['Marijuana Cases - Data'])
+
+    writer.writerows(new_row_list)
+
+    csvfile.close()
+
